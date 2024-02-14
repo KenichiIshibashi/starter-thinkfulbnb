@@ -51,6 +51,11 @@ main img {
 }
 
 /* -------  Navigation ------- */
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
 header {
   background-color: #ff385c;
@@ -104,6 +109,20 @@ form button {
   width: 100%;
 }
 
+/* ------- About ------- */
+#about img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/*------- Ideas -------*/
+#ideas img {
+  width: 100%;
+}
+
+#host img {
+  width: 100%;
+}
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +136,69 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media screen and (min-width: 768px) {
+  
+  header {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  #stay fieldset{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* About */
+
+  #about-body {
+    display: flex;
+    align-items: center;
+  }
+
+  #about-body img{
+    width: 40%;
+    padding-right: 10px;
+  }
+
+  #about-body p {
+    text-align: center;
+  }
+
+  /* Ideas */
+
+  .first {
+    display: flex;
+  }
+
+  #ideas img {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+
+  /* Host */
+  #host .columns{
+    display: flex;
+  }
+
+  #host .content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+  }
+
+  #host .image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
