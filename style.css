@@ -147,6 +147,29 @@ footer p {
     font-size: 30px;
   }
 
+  form fieldset div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  form label {
+    width: 50%;
+  }
+
+  form input,
+  form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  form button {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
   #stay fieldset {
     display: flex;
     justify-content: space-around;
