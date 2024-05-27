@@ -2,7 +2,6 @@
 
 body {
   font-family: "Lato", sans-serif;
-  display: grid;
 }
 
 h2 {
@@ -20,7 +19,6 @@ h3 {
 p {
   line-height: 1.5em;
   margin: 0;
-  align-content: center;
 }
 
 section {
@@ -36,27 +34,31 @@ main img {
   width: 100%;
 }
 
-#about p {
-  padding-left: 2%;
-}
-
-/* ---  Groups & Items --- */
-
-.group {
+form fieldset div {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.item {
+form label {
+  width: 30%;
+}
+
+form input,
+form select {
   flex: 1;
-  margin: 10px;
-}
-
-.about-paragraph {
-  flex: 2;
+  margin-left: 10px;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 /* -------  Navigation ------- */
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
 header {
   background-color: #ff385c;
@@ -68,17 +70,6 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;
-}
-
-header nav ul {
-  display: flex;
-  padding-left: 0;
-  list-style: none;
 }
 
 header nav ul li {
@@ -100,9 +91,6 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
 }
 
 form label {
@@ -113,10 +101,6 @@ form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
-  border-style: solid;
-  border-color: grey;
-  border-radius: 6%;
-  float: right;
 }
 
 form button {
@@ -125,6 +109,30 @@ form button {
   color: #fff;
   font-size: 24px;
   padding: 15px;
+  width: 100%;
+}
+
+/* ------- About ------- */
+#about .about-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  flex: 1;
+  margin: 10px;
+}
+
+.paragraph-container {
+  flex: 2;
+}
+
+/*------- Ideas -------*/
+#ideas img {
+  width: 100%;
+}
+
+#host img {
   width: 100%;
 }
 
@@ -141,55 +149,73 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
 
-  header h1 {
-    font-size: 48px;
-    margin: 14px 0;
-    padding-top: 0;
-  }
-
-  header nav {
-    padding: 10px;
-  }
-
-  .group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+@media screen and (min-width: 768px) {
+  /* Stay Section */
+  form fieldset div {
+    flex: 1;
+    padding-left: 10px;
   }
 
   form label {
-    display: flex;
-    justify-content: space-between;
-    vertical-align: top;
+    flex: 0.5;
   }
 
-  form input,
-  form select {
-    float: left;
-    vertical-align: bottom;
-  }
-
-  .item {
+  form select,
+  form input {
     flex: 1;
+  }
+
+  /* About Section */
+  #about .about-body {
+    flex-direction: row;
+  }
+
+  .image-container,
+  .paragraph-container {
     margin: 10px;
   }
 
-  .item-double {
-    flex: 2 2;
+  .paragraph-container {
+    flex: 2;
   }
 
-  form {
+  /* Ideas Section */
+  .ideas-image-group {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
+  }
+
+  .ideas-first-image-group {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .ideas-second-image-group {
+    flex: 1;
+  }
+
+  .ideas-second-image-group div,
+  .ideas-first-image-group div {
+    margin-bottom: 20px;
+  }
+
+  .ideas-second-image-group div:last-child,
+  .ideas-first-image-group div:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Host Section */
+  .columns {
+    display: flex;
+    align-items: center;
+  }
+
+  .columns .content {
+    flex: 1;
+  }
+
+  .columns .image {
+    flex: 1;
+    margin-left: 20px;
   }
 }
