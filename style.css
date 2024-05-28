@@ -34,23 +34,20 @@ main img {
   width: 100%;
 }
 
-form fieldset div {
+.options {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-form label {
-  width: 30%;
-}
-
-form input,
-form select {
   flex: 1;
-  margin-left: 10px;
-  padding: 8px;
-  box-sizing: border-box;
+  margin: 10px;
+}
+
+form button {
+  background-color: #ff385c;
+  border: none;
+  color: #fff;
+  font-size: 18px; /* Adjust font size */
+  padding: 10px; /* Adjust padding */
+  width: auto; /* Allow width to adjust */
+  min-width: 100px; /* Ensure a minimum width */
 }
 
 /* -------  Navigation ------- */
@@ -91,6 +88,7 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 form label {
@@ -99,16 +97,16 @@ form label {
 
 form select,
 form input {
+  width: 100%;
   margin-bottom: 20px;
-  width: 180px;
 }
 
 form button {
   background-color: #ff385c;
   border: none;
   color: #fff;
-  font-size: 24px;
-  padding: 15px;
+  font-size: 18px; /* Adjust font size */
+  padding: 10px; /* Adjust padding */
   width: 100%;
 }
 
@@ -152,18 +150,45 @@ footer p {
 
 @media screen and (min-width: 768px) {
   /* Stay Section */
-  form fieldset div {
-    flex: 1;
-    padding-left: 10px;
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  header h1 {
+    font-size: 48px;
+    margin: 14px 0;
+    padding-top: 0;
+  }
+
+  header nav {
+    padding: 10px;
   }
 
   form label {
-    flex: 0.5;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: top;
   }
 
-  form select,
-  form input {
+  form input,
+  form select {
+    float: left;
+    vertical-align: bottom;
+  }
+
+  .options {
     flex: 1;
+    margin: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
   }
 
   /* About Section */
